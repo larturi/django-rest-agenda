@@ -1,4 +1,5 @@
 from .base import *
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -10,10 +11,10 @@ ALLOWED_HOSTS = []
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': get_secret('DB_NAME'),
-        'USER': get_secret('USER'),
-        'PASSWORD': get_secret('PASSWORD'),
-        'HOST': 'localhost',
+        'NAME': env('POSTGRES_DB'),
+        'USER': env('POSTGRES_USER'),
+        'PASSWORD': env('POSTGRES_PASSWORD'),
+        'HOST': env('POSTGRES_HOST'),
         'PORT': '5432',
     }
 }
@@ -21,7 +22,8 @@ DATABASES = {
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR.child('static')]
+STATICFILES_DIRS = [BASE_DIR / "static",]
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR.child('media')
+MEDIA_ROOT = BASE_DIR.parent/'media/'
+
