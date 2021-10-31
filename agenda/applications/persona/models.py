@@ -1,10 +1,7 @@
-#
 from model_utils.models import TimeStampedModel
-#
+
 from django.db import models
 
-
-#
 class Person(TimeStampedModel):
     """  Modelo para registrar personas de una agenda  """
 

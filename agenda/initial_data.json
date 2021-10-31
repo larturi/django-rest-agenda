@@ -1,0 +1,93 @@
+[
+    {
+        "model": "persona.person",
+        "fields": {
+            "full_name": "Juan Perez",
+            "job": "Mobile Developer",
+            "email": "jperez@correo.com",
+            "phone": "112345678"
+        }
+    },
+    {
+        "model": "persona.person",
+        "fields": {
+            "full_name": "Maria Lopez",
+            "job": "Frontend Developer",
+            "email": "mlopez@correo.com",
+            "phone": "156543489"
+        }
+    },
+    {
+        "model": "persona.person",
+        "fields": {
+            "full_name": "Carlos Gutierrex",
+            "job": "Mobile Developer",
+            "email": "cgutierrez@correo.com",
+            "phone": "332244556"
+        }
+    },
+    {
+        "model": "persona.person",
+        "fields": {
+            "full_name": "Luciana Salazar",
+            "job": "Backend Developer",
+            "email": "lsalazar@correo.com",
+            "phone": "115348971"
+        }
+    },
+    {
+        "model": "persona.person",
+        "fields": {
+            "full_name": "Pancho Dotto",
+            "job": "Ful Stack Developer",
+            "email": "pdotto@correo.com",
+            "phone": "119874573"
+        }
+    },
+    {
+        "model": "persona.person",
+        "fields": {
+            "full_name": "Pamela Chu",
+            "job": "Mobile Developer",
+            "email": "pchu@correo.com",
+            "phone": "1199836737"
+        }
+    },
+    {
+        "model": "persona.person",
+        "fields": {
+            "full_name": "Andrea Rincon",
+            "job": "PM",
+            "email": "arincon@correo.com",
+            "phone": "119836373"
+        }
+    },
+    {
+        "model": "persona.person",
+        "fields": {
+            "full_name": "Marcelo Gallardo",
+            "job": "Tech Lead",
+            "email": "mgallardo@correo.com",
+            "phone": "1563738839"
+        }
+    },
+    {
+        "model": "persona.person",
+        "fields": {
+            "full_name": "Aaron Carter",
+            "job": "Mobile Developer",
+            "email": "acater@correo.com",
+            "phone": "553673893"
+        }
+    },
+    {
+        "model": "persona.person",
+        "fields": {
+            "full_name": "Lourdes Sanchez",
+            "job": "UX",
+            "email": "lsanchez@correo.com",
+            "phone": "1177836637"
+        }
+    }
+    
+]

@@ -30,6 +30,7 @@ LOCAL_APPS = (
 )
 
 THIRD_PARTY_APPS = (
+    'rest_framework',
 )
 
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PARTY_APPS
@@ -62,8 +63,9 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'agenda.wsgi.application'
+DEFAULT_AUTO_FIELD='django.db.models.AutoField' 
 
+WSGI_APPLICATION = 'agenda.wsgi.application'
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
