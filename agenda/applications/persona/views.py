@@ -3,7 +3,8 @@ from django.shortcuts import render
 from rest_framework.generics import (
     ListAPIView,
     CreateAPIView,
-    RetrieveAPIView
+    RetrieveAPIView,
+    DestroyAPIView
 )
 
 from .models import Person
@@ -28,5 +29,9 @@ class PersonCreateApiView(CreateAPIView):
 
 class PersonDetailApiView(RetrieveAPIView):
     serializer_class = PersonSerializer
-
     queryset = Person.objects.all()
+
+class PersonDeleteApiView(DestroyAPIView):
+    serializer_class = PersonSerializer
+    queryset = Person.objects.all()
+
