@@ -4,7 +4,8 @@ from django.urls import path, re_path, include
 from .views import (
     PersonCreateApiView,
     PersonDeleteApiView, 
-    PersonDetailApiView, 
+    PersonDetailApiView,
+    PersonUpdateApiView, 
     PersonsListApiView, 
     PersonsSearchListApiView
 )
@@ -17,4 +18,5 @@ urlpatterns = [
     path('api/person/create/', PersonCreateApiView.as_view()),
     path('api/person/detail/<pk>/', PersonDetailApiView.as_view()),
     path('api/person/delete/<pk>/', PersonDeleteApiView.as_view()),
+    path('api/person/update/<pk>/', PersonUpdateApiView.as_view()),
 ]
