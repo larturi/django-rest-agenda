@@ -11,6 +11,8 @@ psycopg2-binary = "*"
 pytz = "*"
 sqlparse = "*"
 unipath = "*"
+django-environ = "*"
+djangorestframework = "*"
 
 [dev-packages]
 

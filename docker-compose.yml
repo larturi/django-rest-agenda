@@ -17,7 +17,7 @@ services:
     - pgadmin_data:/var/lib/pgadmin
     env_file: .env
     ports:
-      - "80:80"
+      - "82:80"
 
 volumes:
   postgres_data:
