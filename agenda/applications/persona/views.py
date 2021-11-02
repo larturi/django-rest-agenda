@@ -8,8 +8,12 @@ from rest_framework.generics import (
     RetrieveUpdateAPIView
 )
 
-from .models import Person, Reunion
+from .models import (
+    Person, Reunion, Hobby
+)
+
 from .serializers import (
+    HobbySerializer,
     PersonSerializer,
     ReunionSerializer
 )
@@ -28,6 +32,7 @@ class PersonsSearchListApiView(ListAPIView):
         return Person.objects.filter(
             full_name__icontains=kword
         )
+
 class PersonCreateApiView(CreateAPIView):
     serializer_class = PersonSerializer
 
@@ -43,7 +48,6 @@ class PersonUpdateApiView(RetrieveUpdateAPIView):
     serializer_class = PersonSerializer
     queryset = Person.objects.all()
 
-
 class PersonApiView(ListAPIView):
     # Vista para interactuar con serializer 
     serializer_class = PersonSerializer
@@ -56,3 +60,7 @@ class ReunionApiView(ListAPIView):
     
     def get_queryset(self):
         return Reunion.objects.all()
+
+class HobbyDetailApiView(RetrieveAPIView):
+    serializer_class = HobbySerializer
+    queryset = Hobby.objects.all()

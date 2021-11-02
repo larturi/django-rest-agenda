@@ -13,6 +13,7 @@ class Hobby(TimeStampedModel):
     def __str__(self):
         return self.hobby
 
+
 class Person(TimeStampedModel):
 
     full_name = models.CharField(

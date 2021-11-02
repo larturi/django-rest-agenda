@@ -8,9 +8,11 @@ from .views import (
     PersonUpdateApiView, 
     PersonsListApiView, 
     PersonsSearchListApiView,
-    # 
     PersonApiView,
-    ReunionApiView
+    # 
+    ReunionApiView,
+    # 
+    HobbyDetailApiView,
 )
 
 app_name = 'person_app'
@@ -19,11 +21,13 @@ urlpatterns = [
     path('api/person/list/', PersonsListApiView.as_view()),
     path('api/person/search/<kword>/', PersonsSearchListApiView.as_view()),
     path('api/person/create/', PersonCreateApiView.as_view()),
-    path('api/person/detail/<pk>/', PersonDetailApiView.as_view()),
+    path('api/person/detail/<pk>/', PersonDetailApiView.as_view(), name='person_detail'),
     path('api/person/delete/<pk>/', PersonDeleteApiView.as_view()),
     path('api/person/update/<pk>/', PersonUpdateApiView.as_view()),
     # 
     path('api/personas/', PersonApiView.as_view()),
+    # 
+    path('api/hobbies/detail/<pk>/', HobbyDetailApiView.as_view()),
     # 
     path('api/reuniones/list/', ReunionApiView.as_view()),
 ]

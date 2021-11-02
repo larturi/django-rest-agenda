@@ -25,9 +25,8 @@ class PersonSerializer(serializers.ModelSerializer):
             'hobbies',
         )
 
-class ReunionSerializer(serializers.ModelSerializer):
+class ReunionSerializer(serializers.HyperlinkedModelSerializer):
 
-    persona = PersonSerializer()
     fecha_hora = serializers.SerializerMethodField()
     class Meta:
         model = Reunion
@@ -37,6 +36,12 @@ class ReunionSerializer(serializers.ModelSerializer):
             'fecha_hora',
             'persona',
         )
+        extra_kwargs={
+            'persona': {
+                'view_name': 'person_app:person_detail',
+                'lookup_field': 'pk'
+            }
+        }
 
     def get_fecha_hora(self, obj):
         return str(obj.fecha) + ' ' + str(obj.hora)
