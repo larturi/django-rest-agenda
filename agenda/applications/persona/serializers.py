@@ -11,6 +11,7 @@ class HobbySerializer(serializers.ModelSerializer):
             'hobby',
         )
 
+
 class PersonSerializer(serializers.ModelSerializer):
 
     hobbies = HobbySerializer(many=True)
@@ -45,3 +46,7 @@ class ReunionSerializer(serializers.HyperlinkedModelSerializer):
 
     def get_fecha_hora(self, obj):
         return str(obj.fecha) + ' ' + str(obj.hora)
+
+class CountReunionesSerializer(serializers.Serializer):
+    persona__job = serializers.CharField()
+    cantidad = serializers.IntegerField()

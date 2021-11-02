@@ -13,6 +13,7 @@ from .views import (
     ReunionApiView,
     # 
     HobbyDetailApiView,
+    ReunionByJob,
 )
 
 app_name = 'person_app'
@@ -30,4 +31,5 @@ urlpatterns = [
     path('api/hobbies/detail/<pk>/', HobbyDetailApiView.as_view()),
     # 
     path('api/reuniones/list/', ReunionApiView.as_view()),
+    path('api/reuniones/job/', ReunionByJob.as_view()),
 ]

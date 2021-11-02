@@ -15,7 +15,8 @@ from .models import (
 from .serializers import (
     HobbySerializer,
     PersonSerializer,
-    ReunionSerializer
+    ReunionSerializer,
+    CountReunionesSerializer
 )
 
 class PersonsListApiView(ListAPIView):
@@ -64,3 +65,9 @@ class ReunionApiView(ListAPIView):
 class HobbyDetailApiView(RetrieveAPIView):
     serializer_class = HobbySerializer
     queryset = Hobby.objects.all()
+
+class ReunionByJob(ListAPIView):
+    serializer_class = CountReunionesSerializer
+    
+    def get_queryset(self):
+        return Reunion.objects.cantidad_reuniones_job()
