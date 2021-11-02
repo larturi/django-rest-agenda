@@ -28,12 +28,15 @@ class PersonSerializer(serializers.ModelSerializer):
 class ReunionSerializer(serializers.ModelSerializer):
 
     persona = PersonSerializer()
+    fecha_hora = serializers.SerializerMethodField()
     class Meta:
         model = Reunion
         fields = (
             'id',
             'asunto',
-            'fecha',
-            'hora',
+            'fecha_hora',
             'persona',
         )
+
+    def get_fecha_hora(self, obj):
+        return str(obj.fecha) + ' ' + str(obj.hora)
