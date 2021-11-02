@@ -1,10 +1,19 @@
 from django.db import models
+from django.db.models import fields
 from rest_framework import serializers
-from .models import Person
+from .models import Hobby, Person, Reunion
 
+class HobbySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Hobby
+        fields = (
+            'id',
+            'hobby',
+        )
 
 class PersonSerializer(serializers.ModelSerializer):
-# Serializer basado en modelo
+
+    hobbies = HobbySerializer(many=True)
     class Meta:
         model = Person
         fields = (
@@ -13,13 +22,18 @@ class PersonSerializer(serializers.ModelSerializer):
             'job',
             'email',
             'phone',
+            'hobbies',
         )
 
-class PersonaSerializer(serializers.Serializer):
-# Serializer no basado en modelo
+class ReunionSerializer(serializers.ModelSerializer):
+
+    persona = PersonSerializer()
     class Meta:
-        id = serializers.IntegerField()
-        full_name = serializers.CharField()
-        job = serializers.CharField()
-        email = serializers.EmailField()
-        phone = serializers.CharField()
+        model = Reunion
+        fields = (
+            'id',
+            'asunto',
+            'fecha',
+            'hora',
+            'persona',
+        )
