@@ -2,6 +2,7 @@
     {
         "model": "persona.person",
         "fields": {
+            "id": 1,
             "full_name": "Juan Perez",
             "job": "Mobile Developer",
             "email": "jperez@correo.com",
@@ -11,6 +12,7 @@
     {
         "model": "persona.person",
         "fields": {
+            "id": 2,
             "full_name": "Maria Lopez",
             "job": "Frontend Developer",
             "email": "mlopez@correo.com",
@@ -20,6 +22,7 @@
     {
         "model": "persona.person",
         "fields": {
+            "id": 3,
             "full_name": "Carlos Gutierrex",
             "job": "Mobile Developer",
             "email": "cgutierrez@correo.com",
@@ -29,6 +32,7 @@
     {
         "model": "persona.person",
         "fields": {
+            "id": 4,
             "full_name": "Luciana Salazar",
             "job": "Backend Developer",
             "email": "lsalazar@correo.com",
@@ -38,6 +42,7 @@
     {
         "model": "persona.person",
         "fields": {
+            "id": 5,
             "full_name": "Pancho Dotto",
             "job": "Ful Stack Developer",
             "email": "pdotto@correo.com",
@@ -47,6 +52,7 @@
     {
         "model": "persona.person",
         "fields": {
+            "id": 6,
             "full_name": "Pamela Chu",
             "job": "Mobile Developer",
             "email": "pchu@correo.com",
@@ -56,6 +62,7 @@
     {
         "model": "persona.person",
         "fields": {
+            "id": 7,
             "full_name": "Andrea Rincon",
             "job": "PM",
             "email": "arincon@correo.com",
@@ -65,6 +72,7 @@
     {
         "model": "persona.person",
         "fields": {
+            "id": 8,
             "full_name": "Marcelo Gallardo",
             "job": "Tech Lead",
             "email": "mgallardo@correo.com",
@@ -74,6 +82,7 @@
     {
         "model": "persona.person",
         "fields": {
+            "id": 9,
             "full_name": "Aaron Carter",
             "job": "Mobile Developer",
             "email": "acater@correo.com",
@@ -83,10 +92,135 @@
     {
         "model": "persona.person",
         "fields": {
+            "id": 10,
             "full_name": "Lourdes Sanchez",
             "job": "UX",
             "email": "lsanchez@correo.com",
             "phone": "1177836637"
+        }
+    },
+
+
+    {
+        "model": "persona.hobby",
+        "fields": {
+            "hobby": "Futbol"
+        }
+    },
+    {
+        "model": "persona.hobby",
+        "fields": {
+            "hobby": "Cine"
+        }
+    },
+    {
+        "model": "persona.hobby",
+        "fields": {
+            "hobby": "Cocina"
+        }
+    },
+    {
+        "model": "persona.hobby",
+        "fields": {
+            "hobby": "Arte"
+        }
+    },
+    {
+        "model": "persona.hobby",
+        "fields": {
+            "hobby": "Idiomas"
+        }
+    },
+
+
+    {
+        "model": "persona.reunion",
+        "fields": {
+            "persona": 1,
+            "fecha": "2022-11-21",
+            "hora": "10:30",
+            "asunto": "Asunto de reunión 1"
+        }
+    },
+    {
+        "model": "persona.reunion",
+        "fields": {
+            "persona": 2,
+            "fecha": "2022-11-21",
+            "hora": "12:20",
+            "asunto": "Asunto de reunión 2"
+        }
+    },
+    {
+        "model": "persona.reunion",
+        "fields": {
+            "persona": 3,
+            "fecha": "2022-11-21",
+            "hora": "13:20",
+            "asunto": "Asunto de reunión 3"
+        }
+    },
+    {
+        "model": "persona.reunion",
+        "fields": {
+            "persona": 4,
+            "fecha": "2022-11-21",
+            "hora": "14:20",
+            "asunto": "Asunto de reunión 4"
+        }
+    },
+    {
+        "model": "persona.reunion",
+        "fields": {
+            "persona": 4,
+            "fecha": "2022-11-21",
+            "hora": "10:20",
+            "asunto": "Asunto de reunión 5"
+        }
+    },
+    {
+        "model": "persona.reunion",
+        "fields": {
+            "persona": 6,
+            "fecha": "2022-11-21",
+            "hora": "15:20",
+            "asunto": "Asunto de reunión 6"
+        }
+    },
+    {
+        "model": "persona.reunion",
+        "fields": {
+            "persona": 7,
+            "fecha": "2022-11-21",
+            "hora": "19:20",
+            "asunto": "Asunto de reunión 7"
+        }
+    },
+    {
+        "model": "persona.reunion",
+        "fields": {
+            "persona": 8,
+            "fecha": "2022-11-21",
+            "hora": "20:20",
+            "asunto": "Asunto de reunión 8"
+        }
+    },
+    {
+        "model": "persona.reunion",
+        "fields": {
+            "persona": 8,
+            "fecha": "2022-11-21",
+            "hora": "11:20",
+            "asunto": "Asunto de reunión 9"
+        }
+    },
+    {
+        "model": "persona.reunion",
+        "fields": {
+            "persona": 8,
+            "fecha": "2022-11-21",
+            "hora": "14:20",
+            "asunto": "Asunto de reunión 10"
         }
     }
     

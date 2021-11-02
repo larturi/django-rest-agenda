@@ -9,7 +9,10 @@ from rest_framework.generics import (
 )
 
 from .models import Person
-from .serializers import PersonSerializer
+from .serializers import (
+    PersonSerializer,
+    PersonaSerializer
+)
 
 class PersonsListApiView(ListAPIView):
     serializer_class = PersonSerializer
@@ -39,3 +42,10 @@ class PersonDeleteApiView(DestroyAPIView):
 class PersonUpdateApiView(RetrieveUpdateAPIView):
     serializer_class = PersonSerializer
     queryset = Person.objects.all()
+
+class PersonApiView(ListAPIView):
+    # Vista para interactuar con serializer 
+    serializer_class = PersonaSerializer
+    
+    def get_queryset(self):
+        return Person.objects.all()

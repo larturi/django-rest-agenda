@@ -1,6 +1,5 @@
-# Blog Personal
-Blog Personal con Django & Postgres
-
+# Agenda DRF
+Api Agenda con Django Rest Framework
 # Get Started:
 
 Instalar dependencias:
@@ -16,9 +15,15 @@ cp .env.dist .env
 ```
 
 Levantar Postgres con Docker
-```
-docker-compose up
-```
+```bash
+# Levantar el entorno
+docker-compose up -d
+
+# Bajar el entorno
+docker-compose down
+
+# Borrar datos del entorno
+docker-compose down -v
 
 Crear migraciones:
 ```
@@ -26,9 +31,15 @@ python3 manage.py makemigrations
 python3 manage.py migrate
 ```
 
+Carga de datos inicial
+
+```bash
+python manage.py loaddata initial_data.json
+```
+
 Ejecutar servidor local
 ```
-python manage.py runserver --settings=empleados.settings.local
+python manage.py runserver
 ```
 
 ##### Made with ❤️ by Leandro Arturi
